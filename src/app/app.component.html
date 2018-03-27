@@ -2,4 +2,9 @@
 <h1>Keg Room</h1>
 <p>Welcome to the Keg control room!</p>
 
+<ul>
+  <li *ngFor="let keg of masterKegList">{{keg.name}}</li>
+</ul>
+
 <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
+<app-keg-list></app-keg-list>
