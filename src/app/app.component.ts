@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Keg } from './models/keg.model';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
