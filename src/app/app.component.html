@@ -2,7 +2,16 @@
 <h1>Keg Room</h1>
 <p>Welcome to the Keg control room!</p>
 
-
-<app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
-<app-keg-list [childKegList] = "masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
-<app-edit-keg [selectedKeg]="selectedKeg" (clickDone) ="finishedEditing()"></app-edit-keg>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
+    </div>
+    <div class="col-md-4">
+      <app-keg-list [childKegList] = "masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+    </div>
+    <div class="col-md-4">
+      <app-edit-keg [selectedKeg]="selectedKeg" (clickDone) ="finishedEditing()"></app-edit-keg>
+    </div>
+  </div>
+</div>
