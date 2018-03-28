@@ -5,6 +5,7 @@ import { NewKegComponent } from './new-keg/new-keg.component';
 import { KegListComponent } from './keg-list/keg-list.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
 import { FormsModule } from '@angular/forms';
+import { EmptinessPipe } from './emptiness.pipe';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     NewKegComponent,
     KegListComponent,
     EditKegComponent,
+    EmptinessPipe,
   ],
   imports: [
     BrowserModule,

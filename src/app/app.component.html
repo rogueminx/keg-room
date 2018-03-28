@@ -1,20 +1,23 @@
 <div class="container">
-  <div class="main-title">
-    <h1>Keg Room</h1>
-    <p>Welcome to the Keg control room!</p>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
+  <div class="title-beer">
+    <div class="beer-photo">
+      <img src='./assets/img/taps2.jpg'>
     </div>
-    <div class="col-md-6">
-      <app-keg-list [childKegList] = "masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
-    </div>
-    <div class="col-md-3">
-      <app-edit-keg [selectedKeg]="selectedKeg" (clickDone) ="finishedEditing()"></app-edit-keg>
+    <div class="main-title">
+      <h1>Keg Room</h1>
     </div>
   </div>
-  <div class="beer-photo">
-    <img src='./assets/img/taps.jpg' alt="">
+  <div class="keg-info">
+    <div class="row">
+      <div class="col-md-3">
+        <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
+      </div>
+      <div class="col-md-6">
+        <app-keg-list [childKegList] = "masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+      </div>
+      <div class="col-md-3">
+        <app-edit-keg [selectedKeg]="selectedKeg" (clickDone) ="finishedEditing()"></app-edit-keg>
+      </div>
+    </div>
   </div>
 </div>

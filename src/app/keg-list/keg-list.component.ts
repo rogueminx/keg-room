@@ -15,6 +15,12 @@ export class KegListComponent {
   this.clickSender.emit(kegToEdit);
 }
 
+  filterByEmptiness: string = "fullKeg";
+
+  onChange(optionFromMenu) {
+  this.filterByEmptiness = optionFromMenu;
+}
+
   sellPintClicked(keg) {
   keg.amountLeft -= 1;
   }
