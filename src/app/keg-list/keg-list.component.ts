@@ -18,4 +18,12 @@ export class KegListComponent {
   sellPintClicked(keg) {
   keg.amountLeft -= 1;
   }
+
+  nearEmpty(keg){
+    if (keg.amountLeft <= 10) {
+      return "nearEmpty"
+    } else {
+      return "nearFull"
+    }
+  }
 }
