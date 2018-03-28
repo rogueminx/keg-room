@@ -26,4 +26,22 @@ export class KegListComponent {
       return "nearFull"
     }
   }
+
+  expensiveKeg(keg){
+    if( keg.price >= 7.01) {
+      return "$$$"
+    } else if ((keg.price >= 5) && (keg.price <= 7)) {
+      return "$$"
+    } else {
+      return "$"
+    }
+  }
+
+  alcoholContent(keg){
+    if (keg.alcoholContent >= 6) {
+      return "highContent"
+    } else {
+      return "lowContent"
+    }
+  }
 }

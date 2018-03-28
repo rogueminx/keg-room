@@ -1,7 +1,22 @@
 .nearEmpty{
   background-color: #ff9999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .nearFull{
   background-color: #cce5cc;
+    font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+#highContent{
+  font-weight: 800;
+  font-size: 18px;
+}
+
+#lowContent{
+  font-weight: 400;
+  font-size: 18px;
 }
