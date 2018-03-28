@@ -6,3 +6,4 @@
 <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
 <app-keg-list [childKegList] = "masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
 <app-edit-keg [selectedKeg]="selectedKeg" (clickDone) ="finishedEditing()"></app-edit-keg>
+<app-sell-pint [selectedKeg]="selectedKeg"></app-sell-pint>

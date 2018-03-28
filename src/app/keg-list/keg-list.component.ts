@@ -13,7 +13,9 @@ export class KegListComponent {
 
   editButtonClicked(kegToEdit: Keg) {
   this.clickSender.emit(kegToEdit);
+}
+
+  sellPintClicked(keg) {
+  keg.amountLeft -= 1;
   }
-
-
 }

@@ -1,4 +1,4 @@
 <h1>Current Keg List</h1>
 <ul>
-  <li *ngFor="let keg of childKegList">{{keg.name}}  <button (click)="editButtonClicked(keg)">Edit</button></li>
+  <li *ngFor="let keg of childKegList">{{keg.name}}  <button (click)="editButtonClicked(keg)">Edit</button> {{keg.amountLeft}} pints left <button (click)="sellPintClicked(keg)">Sell Pint</button></li>
 </ul>
