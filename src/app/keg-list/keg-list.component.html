@@ -1,6 +1,6 @@
 <h1>Current Keg List</h1>
 <ul>
-  <li [class]="nearEmpty(keg)" [id]="alcoholContent(keg)" *ngFor="let keg of childKegList | emptiness:filterByEmptiness">{{expensiveKeg(keg)}} {{keg.name}}  <button (click)="editButtonClicked(keg)">Edit</button> {{keg.amountLeft}} pints left <button (click)="sellPintClicked(keg)">Sell Pint</button></li>
+  <li [class]="nearEmpty(keg)" [id]="alcoholContent(keg)" *ngFor="let keg of childKegList | emptiness:filterByEmptiness async">{{expensiveKeg(keg)}} {{keg.name}}  <button (click)="editButtonClicked(keg)">Edit</button> {{keg.amountLeft}} pints left <button (click)="sellPintClicked(keg)">Sell Pint</button></li>
 </ul>
 
 <select (change)="onChange($event.target.value)">
@@ -9,3 +9,7 @@
   <option value="almostEmptyKeg">Almost Empty Kegs</option>
   <option value="allKegs">View All Kegs</option>
 </select>
+
+<div *ngFor="let keg of kegs | async">
+  {{keg.name}}
+</div>
